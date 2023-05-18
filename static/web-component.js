@@ -1,180 +1,177 @@
-function x() {
+function E() {
 }
-function pe(e) {
-  return e();
+function Ae(t) {
+  return t();
 }
-function Ee() {
+function Ie() {
   return /* @__PURE__ */ Object.create(null);
 }
-function q(e) {
-  e.forEach(pe);
+function Z(t) {
+  t.forEach(Ae);
 }
-function he(e) {
-  return typeof e == "function";
+function pe(t) {
+  return typeof t == "function";
 }
-function se(e, t) {
-  return e != e ? t == t : e !== t || e && typeof e == "object" || typeof e == "function";
+function fe(t, e) {
+  return t != t ? e == e : t !== e || t && typeof t == "object" || typeof t == "function";
 }
-let le;
-function Se(e, t) {
-  return le || (le = document.createElement("a")), le.href = t, e === le.href;
+let re;
+function Ne(t, e) {
+  return re || (re = document.createElement("a")), re.href = e, t === re.href;
 }
-function Ne(e) {
-  return Object.keys(e).length === 0;
+function ze(t) {
+  return Object.keys(t).length === 0;
 }
-function Ze(e, ...t) {
-  if (e == null)
-    return x;
-  const n = e.subscribe(...t);
+function Le(t, ...e) {
+  if (t == null)
+    return E;
+  const n = t.subscribe(...e);
   return n.unsubscribe ? () => n.unsubscribe() : n;
 }
-function qe(e, t, n) {
-  e.$$.on_destroy.push(Ze(t, n));
+function We(t, e, n) {
+  t.$$.on_destroy.push(Le(e, n));
 }
-const ze = typeof window < "u" ? window : typeof globalThis < "u" ? globalThis : global;
-"WeakMap" in ze;
-function d(e, t) {
-  e.appendChild(t);
+const Je = typeof window < "u" ? window : typeof globalThis < "u" ? globalThis : global;
+"WeakMap" in Je;
+function a(t, e) {
+  t.appendChild(e);
 }
-function I(e, t, n) {
-  e.insertBefore(t, n || null);
+function I(t, e, n) {
+  t.insertBefore(e, n || null);
 }
-function U(e) {
-  e.parentNode && e.parentNode.removeChild(e);
+function Q(t) {
+  t.parentNode && t.parentNode.removeChild(t);
 }
-function me(e, t) {
-  for (let n = 0; n < e.length; n += 1)
-    e[n] && e[n].d(t);
+function _e(t, e) {
+  for (let n = 0; n < t.length; n += 1)
+    t[n] && t[n].d(e);
 }
-function m(e) {
-  return document.createElement(e);
+function A(t) {
+  return document.createElement(t);
 }
-function K(e) {
-  return document.createTextNode(e);
+function Y(t) {
+  return document.createTextNode(t);
 }
 function F() {
-  return K(" ");
+  return Y(" ");
 }
-function Ae() {
-  return K("");
+function be() {
+  return Y("");
 }
-function M(e, t, n, l) {
-  return e.addEventListener(t, n, l), () => e.removeEventListener(t, n, l);
+function N(t, e, n, l) {
+  return t.addEventListener(e, n, l), () => t.removeEventListener(e, n, l);
 }
-function g(e, t, n) {
-  n == null ? e.removeAttribute(t) : e.getAttribute(t) !== n && e.setAttribute(t, n);
+function h(t, e, n) {
+  n == null ? t.removeAttribute(e) : t.getAttribute(e) !== n && t.setAttribute(e, n);
 }
-function Le(e) {
-  return Array.from(e.childNodes);
+function Te(t) {
+  return Array.from(t.childNodes);
 }
-function ee(e, t) {
-  t = "" + t, e.data !== t && (e.data = t);
+function ne(t, e) {
+  e = "" + e, t.data !== e && (t.data = e);
 }
-function xe(e, t) {
-  e.value = t ?? "";
+function y(t, e, n, l) {
+  n == null ? t.style.removeProperty(e) : t.style.setProperty(e, n, l ? "important" : "");
 }
-function b(e, t, n, l) {
-  n == null ? e.style.removeProperty(t) : e.style.setProperty(t, n, l ? "important" : "");
-}
-function Ie(e, t, n) {
-  for (let l = 0; l < e.options.length; l += 1) {
-    const i = e.options[l];
-    if (i.__value === t) {
+function Fe(t, e, n) {
+  for (let l = 0; l < t.options.length; l += 1) {
+    const i = t.options[l];
+    if (i.__value === e) {
       i.selected = !0;
       return;
     }
   }
-  (!n || t !== void 0) && (e.selectedIndex = -1);
+  (!n || e !== void 0) && (t.selectedIndex = -1);
 }
-function Je(e) {
-  const t = e.querySelector(":checked");
-  return t && t.__value;
+function et(t) {
+  const e = t.querySelector(":checked");
+  return e && e.__value;
 }
-function _e(e) {
-  const t = {};
-  for (const n of e)
-    t[n.name] = n.value;
-  return t;
+function Ce(t) {
+  const e = {};
+  for (const n of t)
+    e[n.name] = n.value;
+  return e;
 }
-let be;
-function te(e) {
-  be = e;
+let ye;
+function le(t) {
+  ye = t;
 }
-const J = [], Fe = [];
-let T = [];
-const Ue = [], Te = /* @__PURE__ */ Promise.resolve();
-let ge = !1;
-function et() {
-  ge || (ge = !0, Te.then(ne));
+const T = [], Ue = [];
+let ee = [];
+const Re = [], tt = /* @__PURE__ */ Promise.resolve();
+let me = !1;
+function nt() {
+  me || (me = !0, tt.then(ie));
 }
-function ce(e) {
-  T.push(e);
+function ue(t) {
+  ee.push(t);
 }
-const de = /* @__PURE__ */ new Set();
-let z = 0;
-function ne() {
-  if (z !== 0)
+const ge = /* @__PURE__ */ new Set();
+let L = 0;
+function ie() {
+  if (L !== 0)
     return;
-  const e = be;
+  const t = ye;
   do {
     try {
-      for (; z < J.length; ) {
-        const t = J[z];
-        z++, te(t), tt(t.$$);
+      for (; L < T.length; ) {
+        const e = T[L];
+        L++, le(e), lt(e.$$);
       }
-    } catch (t) {
-      throw J.length = 0, z = 0, t;
+    } catch (e) {
+      throw T.length = 0, L = 0, e;
     }
-    for (te(null), J.length = 0, z = 0; Fe.length; )
-      Fe.pop()();
-    for (let t = 0; t < T.length; t += 1) {
-      const n = T[t];
-      de.has(n) || (de.add(n), n());
+    for (le(null), T.length = 0, L = 0; Ue.length; )
+      Ue.pop()();
+    for (let e = 0; e < ee.length; e += 1) {
+      const n = ee[e];
+      ge.has(n) || (ge.add(n), n());
     }
-    T.length = 0;
-  } while (J.length);
-  for (; Ue.length; )
-    Ue.pop()();
-  ge = !1, de.clear(), te(e);
+    ee.length = 0;
+  } while (T.length);
+  for (; Re.length; )
+    Re.pop()();
+  me = !1, ge.clear(), le(t);
 }
-function tt(e) {
-  if (e.fragment !== null) {
-    e.update(), q(e.before_update);
-    const t = e.dirty;
-    e.dirty = [-1], e.fragment && e.fragment.p(e.ctx, t), e.after_update.forEach(ce);
+function lt(t) {
+  if (t.fragment !== null) {
+    t.update(), Z(t.before_update);
+    const e = t.dirty;
+    t.dirty = [-1], t.fragment && t.fragment.p(t.ctx, e), t.after_update.forEach(ue);
   }
 }
-function nt(e) {
-  const t = [], n = [];
-  T.forEach((l) => e.indexOf(l) === -1 ? t.push(l) : n.push(l)), n.forEach((l) => l()), T = t;
+function it(t) {
+  const e = [], n = [];
+  ee.forEach((l) => t.indexOf(l) === -1 ? e.push(l) : n.push(l)), n.forEach((l) => l()), ee = e;
 }
-const re = /* @__PURE__ */ new Set();
-let S;
-function ue() {
-  S = {
+const ce = /* @__PURE__ */ new Set();
+let W;
+function ae() {
+  W = {
     r: 0,
     c: [],
-    p: S
+    p: W
     // parent group
   };
 }
-function ae() {
-  S.r || q(S.c), S = S.p;
+function de() {
+  W.r || Z(W.c), W = W.p;
 }
-function R(e, t) {
-  e && e.i && (re.delete(e), e.i(t));
+function $(t, e) {
+  t && t.i && (ce.delete(t), t.i(e));
 }
-function P(e, t, n, l) {
-  if (e && e.o) {
-    if (re.has(e))
+function j(t, e, n, l) {
+  if (t && t.o) {
+    if (ce.has(t))
       return;
-    re.add(e), S.c.push(() => {
-      re.delete(e), l && (n && e.d(1), l());
-    }), e.o(t);
+    ce.add(t), W.c.push(() => {
+      ce.delete(t), l && (n && t.d(1), l());
+    }), t.o(e);
   } else
     l && l();
 }
-const lt = [
+const rt = [
   "allowfullscreen",
   "allowpaymentrequest",
   "async",
@@ -201,539 +198,570 @@ const lt = [
   "reversed",
   "selected"
 ];
-[...lt];
-function We(e) {
-  e && e.c();
+[...rt];
+function Ze(t) {
+  t && t.c();
 }
-function Ce(e, t, n, l) {
-  const { fragment: i, after_update: u } = e.$$;
-  i && i.m(t, n), l || ce(() => {
-    const r = e.$$.on_mount.map(pe).filter(he);
-    e.$$.on_destroy ? e.$$.on_destroy.push(...r) : q(r), e.$$.on_mount = [];
-  }), u.forEach(ce);
+function ve(t, e, n, l) {
+  const { fragment: i, after_update: u } = t.$$;
+  i && i.m(e, n), l || ue(() => {
+    const r = t.$$.on_mount.map(Ae).filter(pe);
+    t.$$.on_destroy ? t.$$.on_destroy.push(...r) : Z(r), t.$$.on_mount = [];
+  }), u.forEach(ue);
 }
-function ye(e, t) {
-  const n = e.$$;
-  n.fragment !== null && (nt(n.after_update), q(n.on_destroy), n.fragment && n.fragment.d(t), n.on_destroy = n.fragment = null, n.ctx = []);
+function we(t, e) {
+  const n = t.$$;
+  n.fragment !== null && (it(n.after_update), Z(n.on_destroy), n.fragment && n.fragment.d(e), n.on_destroy = n.fragment = null, n.ctx = []);
 }
-function it(e, t) {
-  e.$$.dirty[0] === -1 && (J.push(e), et(), e.$$.dirty.fill(0)), e.$$.dirty[t / 31 | 0] |= 1 << t % 31;
+function ot(t, e) {
+  t.$$.dirty[0] === -1 && (T.push(t), nt(), t.$$.dirty.fill(0)), t.$$.dirty[e / 31 | 0] |= 1 << e % 31;
 }
-function ve(e, t, n, l, i, u, r, s = [-1]) {
-  const o = be;
-  te(e);
-  const c = e.$$ = {
+function ke(t, e, n, l, i, u, r, s = [-1]) {
+  const o = ye;
+  le(t);
+  const c = t.$$ = {
     fragment: null,
     ctx: [],
     // state
     props: u,
-    update: x,
+    update: E,
     not_equal: i,
-    bound: Ee(),
+    bound: Ie(),
     // lifecycle
     on_mount: [],
     on_destroy: [],
     on_disconnect: [],
     before_update: [],
     after_update: [],
-    context: new Map(t.context || (o ? o.$$.context : [])),
+    context: new Map(e.context || (o ? o.$$.context : [])),
     // everything else
-    callbacks: Ee(),
+    callbacks: Ie(),
     dirty: s,
     skip_bound: !1,
-    root: t.target || o.$$.root
+    root: e.target || o.$$.root
   };
   r && r(c.root);
   let _ = !1;
-  if (c.ctx = n ? n(e, t.props || {}, (h, C, ...H) => {
-    const w = H.length ? H[0] : C;
-    return c.ctx && i(c.ctx[h], c.ctx[h] = w) && (!c.skip_bound && c.bound[h] && c.bound[h](w), _ && it(e, h)), C;
-  }) : [], c.update(), _ = !0, q(c.before_update), c.fragment = l ? l(c.ctx) : !1, t.target) {
-    if (t.hydrate) {
-      const h = Le(t.target);
-      c.fragment && c.fragment.l(h), h.forEach(U);
+  if (c.ctx = n ? n(t, e.props || {}, (d, v, ...K) => {
+    const U = K.length ? K[0] : v;
+    return c.ctx && i(c.ctx[d], c.ctx[d] = U) && (!c.skip_bound && c.bound[d] && c.bound[d](U), _ && ot(t, d)), v;
+  }) : [], c.update(), _ = !0, Z(c.before_update), c.fragment = l ? l(c.ctx) : !1, e.target) {
+    if (e.hydrate) {
+      const d = Te(e.target);
+      c.fragment && c.fragment.l(d), d.forEach(Q);
     } else
       c.fragment && c.fragment.c();
-    t.intro && R(e.$$.fragment), Ce(e, t.target, t.anchor, t.customElement), ne();
+    e.intro && $(t.$$.fragment), ve(t, e.target, e.anchor, e.customElement), ie();
   }
-  te(o);
+  le(o);
 }
-let fe;
-typeof HTMLElement == "function" && (fe = class extends HTMLElement {
+let he;
+typeof HTMLElement == "function" && (he = class extends HTMLElement {
   constructor() {
     super(), this.attachShadow({ mode: "open" });
   }
   connectedCallback() {
-    const { on_mount: e } = this.$$;
-    this.$$.on_disconnect = e.map(pe).filter(he);
-    for (const t in this.$$.slotted)
-      this.appendChild(this.$$.slotted[t]);
+    const { on_mount: t } = this.$$;
+    this.$$.on_disconnect = t.map(Ae).filter(pe);
+    for (const e in this.$$.slotted)
+      this.appendChild(this.$$.slotted[e]);
   }
-  attributeChangedCallback(e, t, n) {
-    this[e] = n;
+  attributeChangedCallback(t, e, n) {
+    this[t] = n;
   }
   disconnectedCallback() {
-    q(this.$$.on_disconnect);
+    Z(this.$$.on_disconnect);
   }
   $destroy() {
-    ye(this, 1), this.$destroy = x;
+    we(this, 1), this.$destroy = E;
   }
-  $on(e, t) {
-    if (!he(t))
-      return x;
-    const n = this.$$.callbacks[e] || (this.$$.callbacks[e] = []);
-    return n.push(t), () => {
-      const l = n.indexOf(t);
+  $on(t, e) {
+    if (!pe(e))
+      return E;
+    const n = this.$$.callbacks[t] || (this.$$.callbacks[t] = []);
+    return n.push(e), () => {
+      const l = n.indexOf(e);
       l !== -1 && n.splice(l, 1);
     };
   }
-  $set(e) {
-    this.$$set && !Ne(e) && (this.$$.skip_bound = !0, this.$$set(e), this.$$.skip_bound = !1);
+  $set(t) {
+    this.$$set && !ze(t) && (this.$$.skip_bound = !0, this.$$set(t), this.$$.skip_bound = !1);
   }
 });
-const L = [];
-function rt(e, t = x) {
+const J = [];
+function ct(t, e = E) {
   let n;
   const l = /* @__PURE__ */ new Set();
   function i(s) {
-    if (se(e, s) && (e = s, n)) {
-      const o = !L.length;
+    if (fe(t, s) && (t = s, n)) {
+      const o = !J.length;
       for (const c of l)
-        c[1](), L.push(c, e);
+        c[1](), J.push(c, t);
       if (o) {
-        for (let c = 0; c < L.length; c += 2)
-          L[c][0](L[c + 1]);
-        L.length = 0;
+        for (let c = 0; c < J.length; c += 2)
+          J[c][0](J[c + 1]);
+        J.length = 0;
       }
     }
   }
   function u(s) {
-    i(s(e));
+    i(s(t));
   }
-  function r(s, o = x) {
+  function r(s, o = E) {
     const c = [s, o];
-    return l.add(c), l.size === 1 && (n = t(i) || x), s(e), () => {
+    return l.add(c), l.size === 1 && (n = e(i) || E), s(t), () => {
       l.delete(c), l.size === 0 && n && (n(), n = null);
     };
   }
   return { set: i, update: u, subscribe: r };
 }
-const oe = rt([]);
-let ie;
-const ot = new Uint8Array(16);
-function ct() {
-  if (!ie && (ie = typeof crypto < "u" && crypto.getRandomValues && crypto.getRandomValues.bind(crypto), !ie))
+const se = ct([]);
+let oe;
+const st = new Uint8Array(16);
+function ut() {
+  if (!oe && (oe = typeof crypto < "u" && crypto.getRandomValues && crypto.getRandomValues.bind(crypto), !oe))
     throw new Error("crypto.getRandomValues() not supported. See https://github.com/uuidjs/uuid#getrandomvalues-not-supported");
-  return ie(ot);
+  return oe(st);
 }
-const E = [];
-for (let e = 0; e < 256; ++e)
-  E.push((e + 256).toString(16).slice(1));
-function st(e, t = 0) {
-  return (E[e[t + 0]] + E[e[t + 1]] + E[e[t + 2]] + E[e[t + 3]] + "-" + E[e[t + 4]] + E[e[t + 5]] + "-" + E[e[t + 6]] + E[e[t + 7]] + "-" + E[e[t + 8]] + E[e[t + 9]] + "-" + E[e[t + 10]] + E[e[t + 11]] + E[e[t + 12]] + E[e[t + 13]] + E[e[t + 14]] + E[e[t + 15]]).toLowerCase();
+const x = [];
+for (let t = 0; t < 256; ++t)
+  x.push((t + 256).toString(16).slice(1));
+function ft(t, e = 0) {
+  return (x[t[e + 0]] + x[t[e + 1]] + x[t[e + 2]] + x[t[e + 3]] + "-" + x[t[e + 4]] + x[t[e + 5]] + "-" + x[t[e + 6]] + x[t[e + 7]] + "-" + x[t[e + 8]] + x[t[e + 9]] + "-" + x[t[e + 10]] + x[t[e + 11]] + x[t[e + 12]] + x[t[e + 13]] + x[t[e + 14]] + x[t[e + 15]]).toLowerCase();
 }
-const ut = typeof crypto < "u" && crypto.randomUUID && crypto.randomUUID.bind(crypto), Re = {
-  randomUUID: ut
+const at = typeof crypto < "u" && crypto.randomUUID && crypto.randomUUID.bind(crypto), Qe = {
+  randomUUID: at
 };
-function at(e, t, n) {
-  if (Re.randomUUID && !t && !e)
-    return Re.randomUUID();
-  e = e || {};
-  const l = e.random || (e.rng || ct)();
-  if (l[6] = l[6] & 15 | 64, l[8] = l[8] & 63 | 128, t) {
+function dt(t, e, n) {
+  if (Qe.randomUUID && !e && !t)
+    return Qe.randomUUID();
+  t = t || {};
+  const l = t.random || (t.rng || ut)();
+  if (l[6] = l[6] & 15 | 64, l[8] = l[8] & 63 | 128, e) {
     n = n || 0;
     for (let i = 0; i < 16; ++i)
-      t[n + i] = l[i];
-    return t;
+      e[n + i] = l[i];
+    return e;
   }
-  return st(l);
+  return ft(l);
 }
-function Qe(e, t, n) {
-  const l = e.slice();
-  return l[11] = t[n], l;
+function Be(t, e, n) {
+  const l = t.slice();
+  return l[13] = e[n], l;
 }
-function Be(e) {
-  let t, n = (
+function De(t) {
+  let e, n = (
     /*node*/
-    e[11].name + ""
+    t[13].name + ""
   ), l, i;
   return {
     c() {
-      t = m("option"), l = K(n), t.__value = i = /*node*/
-      e[11].id, t.value = t.__value;
+      e = A("option"), l = Y(n), e.__value = i = /*node*/
+      t[13].id, e.value = e.__value;
     },
     m(u, r) {
-      I(u, t, r), d(t, l);
+      I(u, e, r), a(e, l);
     },
     p(u, r) {
       r & /*$fileStore*/
-      16 && n !== (n = /*node*/
-      u[11].name + "") && ee(l, n), r & /*$fileStore*/
-      16 && i !== (i = /*node*/
-      u[11].id) && (t.__value = i, t.value = t.__value);
+      32 && n !== (n = /*node*/
+      u[13].name + "") && ne(l, n), r & /*$fileStore*/
+      32 && i !== (i = /*node*/
+      u[13].id) && (e.__value = i, e.value = e.__value);
     },
     d(u) {
-      u && U(t);
+      u && Q(e);
     }
   };
 }
-function De(e) {
-  let t;
+function $e(t) {
+  let e;
   return {
     c() {
-      t = m("p"), t.textContent = "Please add a directory to enable these options.", g(t, "class", "warning-text");
+      e = A("p"), e.textContent = "Please add a directory to enable these options.", h(e, "class", "warning-text");
     },
     m(n, l) {
-      I(n, t, l);
+      I(n, e, l);
     },
     d(n) {
-      n && U(t);
+      n && Q(e);
     }
   };
 }
-function ft(e) {
-  let t, n, l, i, u, r, s, o, c, _, h, C, H, w, Q, v, j, W = (
-    /*$fileStore*/
-    e[4].filter(He).length === 0
-  ), X, N, $, B, O, Y, D, V, Z, G, A = (
-    /*$fileStore*/
-    e[4].filter(Ve)
-  ), k = [];
-  for (let a = 0; a < A.length; a += 1)
-    k[a] = Be(Qe(e, A, a));
-  let f = W && De();
+function He(t) {
+  let e;
   return {
     c() {
-      t = m("div"), n = m("input"), l = F(), i = m("span"), u = m("input"), r = F(), s = m("label"), s.textContent = "Is File", o = F(), c = m("div"), _ = m("span"), h = m("input"), H = F(), w = m("label"), w.textContent = "Save at Root", Q = F(), v = m("select");
-      for (let a = 0; a < k.length; a += 1)
-        k[a].c();
-      j = F(), f && f.c(), N = F(), $ = m("div"), B = m("button"), O = K("Save"), D = F(), V = m("button"), V.textContent = "Cancel", this.c = x, g(n, "type", "text"), g(n, "maxlength", "150"), g(n, "part", "name-input"), g(n, "class", "margin-bottom"), g(n, "placeholder", "File/Directory Name"), g(u, "name", "isFile"), g(u, "type", "checkbox"), g(s, "for", "isFile"), g(i, "class", "margin-bottom flex flex-row items-center column-gap-sm"), g(h, "name", "saveAtRoot"), g(h, "type", "checkbox"), h.disabled = C = /*$fileStore*/
-      e[4].filter(Oe).length === 0, g(w, "for", "saveAtRoot"), g(_, "class", "flex flex-row items-center column-gap-sm margin-bottom"), v.disabled = /*saveAtRoot*/
-      e[2], g(v, "part", "parent-input"), /*parentDirectoryIdToSaveIn*/
-      e[3] === void 0 && ce(() => (
-        /*select_change_handler*/
-        e[10].call(v)
-      )), g(c, "class", X = /*$fileStore*/
-      e[4].filter(Ge).length === 0 ? "warning flex-column margin-top-md" : "flex-column margin-top-md"), g(B, "class", "flex-one"), g(B, "part", "save-btn"), B.disabled = Y = $e(
-        /*name*/
-        e[0],
-        /*saveAtRoot*/
-        e[2],
-        /*parentDirectoryIdToSaveIn*/
-        e[3]
-      ), g(V, "class", "flex-one"), g(V, "part", "cancel-btn"), g($, "class", "margin-top-lg flex-row column-gap"), g(t, "class", "flex-column");
+      e = A("p"), e.textContent = "Name must be unique among siblings.", h(e, "class", "error");
     },
-    m(a, p) {
-      I(a, t, p), d(t, n), xe(
-        n,
+    m(n, l) {
+      I(n, e, l);
+    },
+    d(n) {
+      n && Q(e);
+    }
+  };
+}
+function ht(t) {
+  let e, n, l, i, u, r, s, o, c, _, d, v, K, U, S, b, w, R = (
+    /*$fileStore*/
+    t[5].filter(Ve).length === 0
+  ), B, z, V, H, P, M, O, X, te, G, C, q = (
+    /*$fileStore*/
+    t[5].filter(Ke)
+  ), f = [];
+  for (let m = 0; m < q.length; m += 1)
+    f[m] = De(Be(t, q, m));
+  let p = R && $e(), g = (
+    /*error*/
+    t[4] && He()
+  );
+  return {
+    c() {
+      e = A("div"), n = A("input"), l = F(), i = A("span"), u = A("input"), r = F(), s = A("label"), s.textContent = "Is File", o = F(), c = A("div"), _ = A("span"), d = A("input"), K = F(), U = A("label"), U.textContent = "Save at Root", S = F(), b = A("select");
+      for (let m = 0; m < f.length; m += 1)
+        f[m].c();
+      w = F(), p && p.c(), z = F(), V = A("div"), H = A("button"), P = Y("Save"), O = F(), X = A("button"), X.textContent = "Cancel", te = F(), g && g.c(), this.c = E, h(n, "type", "text"), h(n, "maxlength", "150"), h(n, "part", "name-input"), h(n, "class", "margin-bottom"), h(n, "placeholder", "File/Directory Name"), n.value = /*name*/
+      t[0], h(u, "name", "isFile"), h(u, "type", "checkbox"), h(s, "for", "isFile"), h(i, "class", "margin-bottom flex flex-row items-center column-gap-sm"), h(d, "name", "saveAtRoot"), h(d, "type", "checkbox"), d.disabled = v = /*$fileStore*/
+      t[5].filter(Ge).length === 0, h(U, "for", "saveAtRoot"), h(_, "class", "flex flex-row items-center column-gap-sm margin-bottom"), b.disabled = /*saveAtRoot*/
+      t[2], h(b, "part", "parent-input"), /*parentDirectoryIdToSaveIn*/
+      t[3] === void 0 && ue(() => (
+        /*select_change_handler*/
+        t[11].call(b)
+      )), h(c, "class", B = /*$fileStore*/
+      t[5].filter(Pe).length === 0 ? "warning flex-column margin-top-md" : "flex-column margin-top-md"), h(H, "class", "flex-one"), h(H, "part", "save-btn"), H.disabled = M = Oe(
         /*name*/
-        e[0]
-      ), d(t, l), d(t, i), d(i, u), u.checked = /*isFile*/
-      e[1], d(i, r), d(i, s), d(t, o), d(t, c), d(c, _), d(_, h), h.checked = /*saveAtRoot*/
-      e[2], d(_, H), d(_, w), d(c, Q), d(c, v);
-      for (let y = 0; y < k.length; y += 1)
-        k[y] && k[y].m(v, null);
-      Ie(
-        v,
+        t[0],
+        /*saveAtRoot*/
+        t[2],
         /*parentDirectoryIdToSaveIn*/
-        e[3],
+        t[3]
+      ), h(X, "class", "flex-one"), h(X, "part", "cancel-btn"), h(V, "class", "margin-top-lg flex-row column-gap"), h(e, "class", "flex-column");
+    },
+    m(m, D) {
+      I(m, e, D), a(e, n), a(e, l), a(e, i), a(i, u), u.checked = /*isFile*/
+      t[1], a(i, r), a(i, s), a(e, o), a(e, c), a(c, _), a(_, d), d.checked = /*saveAtRoot*/
+      t[2], a(_, K), a(_, U), a(c, S), a(c, b);
+      for (let k = 0; k < f.length; k += 1)
+        f[k] && f[k].m(b, null);
+      Fe(
+        b,
+        /*parentDirectoryIdToSaveIn*/
+        t[3],
         !0
-      ), d(c, j), f && f.m(c, null), d(t, N), d(t, $), d($, B), d(B, O), d($, D), d($, V), Z || (G = [
-        M(
+      ), a(c, w), p && p.m(c, null), a(e, z), a(e, V), a(V, H), a(H, P), a(V, O), a(V, X), a(e, te), g && g.m(e, null), G || (C = [
+        N(
           n,
           "input",
-          /*input0_input_handler*/
-          e[7]
+          /*onNameInput*/
+          t[6]
         ),
-        M(
+        N(
           u,
           "change",
           /*input1_change_handler*/
-          e[8]
+          t[9]
         ),
-        M(
-          h,
+        N(
+          d,
           "change",
           /*input2_change_handler*/
-          e[9]
+          t[10]
         ),
-        M(
-          v,
+        N(
+          b,
           "change",
           /*select_change_handler*/
-          e[10]
+          t[11]
         ),
-        M(
-          B,
+        N(
+          H,
           "click",
           /*updateFileStore*/
-          e[5]
+          t[7]
         ),
-        M(
-          V,
+        N(
+          X,
           "click",
           /*resetForm*/
-          e[6]
+          t[8]
         )
-      ], Z = !0);
+      ], G = !0);
     },
-    p(a, [p]) {
-      if (p & /*name*/
+    p(m, [D]) {
+      if (D & /*name*/
       1 && n.value !== /*name*/
-      a[0] && xe(
-        n,
-        /*name*/
-        a[0]
-      ), p & /*isFile*/
+      m[0] && (n.value = /*name*/
+      m[0]), D & /*isFile*/
       2 && (u.checked = /*isFile*/
-      a[1]), p & /*$fileStore*/
-      16 && C !== (C = /*$fileStore*/
-      a[4].filter(Oe).length === 0) && (h.disabled = C), p & /*saveAtRoot*/
-      4 && (h.checked = /*saveAtRoot*/
-      a[2]), p & /*$fileStore*/
-      16) {
-        A = /*$fileStore*/
-        a[4].filter(Ve);
-        let y;
-        for (y = 0; y < A.length; y += 1) {
-          const ke = Qe(a, A, y);
-          k[y] ? k[y].p(ke, p) : (k[y] = Be(ke), k[y].c(), k[y].m(v, null));
+      m[1]), D & /*$fileStore*/
+      32 && v !== (v = /*$fileStore*/
+      m[5].filter(Ge).length === 0) && (d.disabled = v), D & /*saveAtRoot*/
+      4 && (d.checked = /*saveAtRoot*/
+      m[2]), D & /*$fileStore*/
+      32) {
+        q = /*$fileStore*/
+        m[5].filter(Ke);
+        let k;
+        for (k = 0; k < q.length; k += 1) {
+          const Ee = Be(m, q, k);
+          f[k] ? f[k].p(Ee, D) : (f[k] = De(Ee), f[k].c(), f[k].m(b, null));
         }
-        for (; y < k.length; y += 1)
-          k[y].d(1);
-        k.length = A.length;
+        for (; k < f.length; k += 1)
+          f[k].d(1);
+        f.length = q.length;
       }
-      p & /*saveAtRoot*/
-      4 && (v.disabled = /*saveAtRoot*/
-      a[2]), p & /*parentDirectoryIdToSaveIn, $fileStore*/
-      24 && Ie(
-        v,
+      D & /*saveAtRoot*/
+      4 && (b.disabled = /*saveAtRoot*/
+      m[2]), D & /*parentDirectoryIdToSaveIn, $fileStore*/
+      40 && Fe(
+        b,
         /*parentDirectoryIdToSaveIn*/
-        a[3]
-      ), p & /*$fileStore*/
-      16 && (W = /*$fileStore*/
-      a[4].filter(He).length === 0), W ? f || (f = De(), f.c(), f.m(c, null)) : f && (f.d(1), f = null), p & /*$fileStore*/
-      16 && X !== (X = /*$fileStore*/
-      a[4].filter(Ge).length === 0 ? "warning flex-column margin-top-md" : "flex-column margin-top-md") && g(c, "class", X), p & /*name, saveAtRoot, parentDirectoryIdToSaveIn, $fileStore*/
-      29 && Y !== (Y = $e(
+        m[3]
+      ), D & /*$fileStore*/
+      32 && (R = /*$fileStore*/
+      m[5].filter(Ve).length === 0), R ? p || (p = $e(), p.c(), p.m(c, null)) : p && (p.d(1), p = null), D & /*$fileStore*/
+      32 && B !== (B = /*$fileStore*/
+      m[5].filter(Pe).length === 0 ? "warning flex-column margin-top-md" : "flex-column margin-top-md") && h(c, "class", B), D & /*name, saveAtRoot, parentDirectoryIdToSaveIn, $fileStore*/
+      45 && M !== (M = Oe(
         /*name*/
-        a[0],
+        m[0],
         /*saveAtRoot*/
-        a[2],
+        m[2],
         /*parentDirectoryIdToSaveIn*/
-        a[3]
-      )) && (B.disabled = Y);
+        m[3]
+      )) && (H.disabled = M), /*error*/
+      m[4] ? g || (g = He(), g.c(), g.m(e, null)) : g && (g.d(1), g = null);
     },
-    i: x,
-    o: x,
-    d(a) {
-      a && U(t), me(k, a), f && f.d(), Z = !1, q(G);
+    i: E,
+    o: E,
+    d(m) {
+      m && Q(e), _e(f, m), p && p.d(), g && g.d(), G = !1, Z(C);
     }
   };
 }
-function $e(e, t, n) {
-  return e.trim().length === 0 || !t && n === null;
+function Oe(t, e, n) {
+  return t.trim().length === 0 || !e && n === null;
 }
-const He = (e) => !e.isFile, Oe = (e) => !e.isFile, Ve = (e) => !e.isFile, Ge = (e) => !e.isFile;
-function dt(e, t, n) {
+const Ve = (t) => !t.isFile, Ge = (t) => !t.isFile, Ke = (t) => !t.isFile, Pe = (t) => !t.isFile;
+function gt(t, e, n) {
   let l;
-  qe(e, oe, (w) => n(4, l = w));
-  let i = "", u = !0, r = !0, s = null;
-  function o() {
-    const w = { id: at(), name: i, isFile: u, children: [] };
-    if (r)
-      oe.update((Q) => [...Q, w]);
-    else {
-      const Q = l.find((v) => v.id == s);
-      if (!Q)
-        return;
-      Q.children = [...Q.children, w], oe.update((v) => [...v]);
-    }
-    c();
-  }
-  function c() {
-    n(0, i = ""), n(1, u = !0), n(2, r = !0), n(3, s = null);
+  We(t, se, (b) => n(5, l = b));
+  let i = "", u = !0, r = !0, s = null, o = !1;
+  function c(b) {
+    const w = b.target;
+    n(0, i = w.value), n(4, o = !1);
   }
   function _() {
-    i = this.value, n(0, i);
+    const b = {
+      id: dt(),
+      name: i.trim(),
+      isFile: u,
+      children: []
+    };
+    if (r) {
+      if (!d(b.name, null)) {
+        n(4, o = !0);
+        return;
+      }
+      se.update((w) => [...w, b]);
+    } else {
+      const w = l.find((R) => R.id == s);
+      if (!w)
+        return;
+      if (!d(b.name, w)) {
+        n(4, o = !0);
+        return;
+      }
+      w.children = [...w.children, b], se.update((R) => [...R]);
+    }
+    v();
   }
-  function h() {
+  function d(b, w) {
+    let R = 0;
+    return w ? R = w.children.findIndex((B) => B.name === b) : R = l.findIndex((B) => B.name === b), R === -1;
+  }
+  function v() {
+    n(0, i = ""), n(1, u = !0), n(2, r = !0), n(3, s = null);
+  }
+  function K() {
     u = this.checked, n(1, u);
   }
-  function C() {
+  function U() {
     r = this.checked, n(2, r);
   }
-  function H() {
-    s = Je(this), n(3, s);
+  function S() {
+    s = et(this), n(3, s);
   }
   return [
     i,
     u,
     r,
     s,
-    l,
     o,
+    l,
     c,
     _,
-    h,
-    C,
-    H
+    v,
+    K,
+    U,
+    S
   ];
 }
-class ht extends fe {
-  constructor(t) {
+class pt extends he {
+  constructor(e) {
     super();
     const n = document.createElement("style");
-    n.textContent = ".flex-column{display:flex;flex-direction:column}.flex-row{display:flex;flex-direction:row}.flex-one{flex:1}.column-gap{column-gap:16px}.column-gap-sm{column-gap:8px}.margin-bottom{margin-bottom:8px}.margin-top-md{margin-top:16px}.margin-top-lg{margin-top:32px}.warning{padding:8px;border:2px dotted #fcd34d;border-radius:8px}.warning-text{background-color:#fcd34d;padding:8px;color:#000;margin-bottom:0px;border-radius:8px}", this.shadowRoot.appendChild(n), ve(
+    n.textContent = ".flex-column{display:flex;flex-direction:column}.flex-row{display:flex;flex-direction:row}.flex-one{flex:1}.column-gap{column-gap:16px}.column-gap-sm{column-gap:8px}.margin-bottom{margin-bottom:8px}.margin-top-md{margin-top:16px}.margin-top-lg{margin-top:32px}.warning{padding:8px;border:2px dotted #fcd34d;border-radius:8px}.warning-text{background-color:#fde68a;padding:8px;color:#000;margin-bottom:0px;border-radius:8px}.error{width:100%;text-align:center;color:#b91c1c}", this.shadowRoot.appendChild(n), ke(
       this,
       {
         target: this.shadowRoot,
-        props: _e(this.attributes),
+        props: Ce(this.attributes),
         customElement: !0
       },
-      dt,
-      ft,
-      se,
+      gt,
+      ht,
+      fe,
       {},
       null
-    ), t && t.target && I(t.target, this, t.anchor);
+    ), e && e.target && I(e.target, this, e.anchor);
   }
 }
-customElements.define("file-input", ht);
-const gt = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJAAAACQCAYAAADnRuK4AAAACXBIWXMAAAsTAAALEwEAmpwYAAADo0lEQVR4nO2bOW4UYRhEKwLugC+AZzEE2DkkSCD1OCDmAiyxF3EDJMhB4hZwAITlCPCCkAMGsHoyB8hEBPxonCEIPPOrp0RVPeld4HWp5xsvQAghhBBCCCGEEEIIIYQQQgghhBBCcOfeuFwateVR05bdUVt+jCalqHj9+fgNu68068dlaTQpH9gPuiuvbO9lRJ2+eYTHM5qUsry9lxF1xfRji/2AFzGg5YyoG85uHvkB7WdEXdG05VR+QFv7f4/oxZedzqI6wX64i7A3HVBGlAHVDKiXEWVAtQPqZUT5CKsdUC8jyg1UO6BeRpQjepYB9bcOMqJ8C6sbUD8jyhFdO6B+RpQjunZA/YwoR/SsAxps/jmgjChH9MwDGmREuYFqBzTIiHID1Q5okBHlBpp1QMPNw4woPweqG9AwI8oNVDugYUaUG6h2QMOMKDdQ7YCGGVF+mTrLgFb+MaCMKH/Sev4BbRxmRPkWVjmgjYwof1Q/54CuPf6UEeUNNP8baO3puKxsfFzYiFZffvX5X/x5H8r/5I1XJ+Xq2YAyogxojgE1x7/K6pPPGVHeQPO/he4c/cyIMqD6N9HN1ydl7dl4oYe19E3Evk9chCrssC5CFXZYF6EKO6yLUIUd1kWowg7rIlRhh3URqrDDughV2GFdhCrssC5CFXZYF6EKO6yLUIUd1kWowg7rIlRhh3URqrDDughV2GFdhCrssC5CFXZYF6EKO6yLUIUd1kWowg7rIlRhh3URqrDDughV2GFdhCrssC5CFXZYF6EKO6yLUIUd1kWowg7rIlRhh3URqrDDughV2GFdhCrssC5CFXZYF6EKO6yLUIUd1kWowg7rIlRhh3URqrDDughV2GFdhCrssC5CFXZYF6EKO6yLUIUd1kWowg7rIlRhh3URqrDDughV2GFdhCrssC5CFXZYF6EKO6yLUIUd1kWowg7rIlRhh3URqrDDughV2GFdhCrssC5CFXZYF6EKO6yLUIUd1kWowg7rIlRhh3URqrDDughV2GFdhCrssC5CFXZYF6EKO6yLUIUd1kWowg7rIlRhh3URqrDDughV2GFdhCrssC5CFXZYF6FK05ZTdlx52/IdqjRt2aUHFrdpyw5UWW/LQ3ZgedtyH6rcOioXm0l5T4+s67u7B+UClFk/LksZUelkPLe/lctw4OxN1JYH08/rHNZl7tFM2zWT8nb6sSX/5gkhhBBCCCGEEEIIIYQQQgghhBBCCDgHvwHDGQwojgVeUQAAAABJRU5ErkJggg==", pt = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJAAAACQCAYAAADnRuK4AAAACXBIWXMAAAsTAAALEwEAmpwYAAAEB0lEQVR4nO2ZwWodZQCFf7A73RRbk9RUIeidUUQE8RkspQ+iFp9B3XXrQlBUJsWKXXSjxlizCIUW0xnr0iiCD6CbWusmJPbIjQs3EgQz859z/T44DzD/9/WfzG0pAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwv0UflVV15aLWy5daL9+rK79rvajKuvJm7fOAf4k+LKe1Xt5WV/arBfPPEV1Cojm6XC6oK/eqx8JNlIcul9fUlYPqkRBRHurKuYh4eJ35oQ/KGevXFq8zb9SV96vHwE0U/anu9bXFTZSDuvJ69QC4iXJRVzary+cmykXr5cfq4rmJclFX7leXTkS5HCnvygnps5PS9lnp5pp0eyYNLRsqnsHcwc21Pd148hdtrVzV5qMv+QV05SHp+pI0NMQymP+D6Vtpe/UnbZx+wSOga49w0wyB25k90PXlN+oG9OnJ+gfB9J/OYGv5kzoBXXsYecOCvNK+Wnpr2oA+PsFra9FeZ5uPPT9dQFvL9R+a6VjPYHv1u2kCmn+q87W1eAH3jbRx6sXxA5r/zlP7YZlGOYOtlavjBzT/kRCBi3kGN574efyAbq3Vf1CmUc7g1tre+AHx3xOLG/DO7MH4AdV+SKYxz4CACEwERASqdQbcQMQnAiICcQMRgRLPgFeYgQQFj4AMJCh4BGQgQcEjIAMJCh4BGUhQ8AjIQIKCR0AGEhQ8AjKQoOARkIEEBY+ADCQoeARkIEHBIyADCQoeARlIUPAIyECCgkdABhIUPAIykKDgEZCBBAWPgAwkKHgEZCBBwSMgAwkKHgEZSFDwCMhAgoJHQAYSFDwCMpCg4BGQgQQFj4AMJCh4BGQgQcEjIAMJCh4BGUhQ8AjIQIKCR0AGEhQ8AjKQoOARkIEEBY+ADCQoeARkIEHBIyADCQoeARlIUPAIyECCgkdABhIUPAIykKDgEZCBBAWPgAwkKHgEZCBBwSMgAwkKHgEZSFDwCMhAgoJHQAYSFDwCMpCg4BGQgQQFj4AMJCh4BGQgQcEjIAMJCh4BGUhQ8AjIQIKCN0VAv9V+SNaOdQb3xg+ob39A4MJGvDtBQM0XBg/KhjHOoPl8/ICG9iICFzTgvnll/IBuP7Wqodmv/rBMx3z77Ovb5szoAR1G1LfvInDBIu6bdyaJ5zCgO+2K+vbX6g/NdEzx3NXOc0uTBXQYUd+8rKE9QGKbHXLf/qG+vTBpPH9HNHuViNrkHUzyh/OREX3zzHleZ23gzdPcVT87VxzQndkpDc0l9c1e9YNhOvoMmn317Xvqn10ubujrpx8/fK399WPjrvrmPkLb2jfN3MGuhmZj/rqa7FMdAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACKI38CFedrXWsWOhwAAAAASUVORK5CYII=";
-function Ke(e, t, n) {
-  const l = e.slice();
-  return l[4] = t[n], l;
+customElements.define("file-input", pt);
+const mt = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJAAAACQCAYAAADnRuK4AAAACXBIWXMAAAsTAAALEwEAmpwYAAADo0lEQVR4nO2bOW4UYRhEKwLugC+AZzEE2DkkSCD1OCDmAiyxF3EDJMhB4hZwAITlCPCCkAMGsHoyB8hEBPxonCEIPPOrp0RVPeld4HWp5xsvQAghhBBCCCGEEEIIIYQQQgghhBBCcOfeuFwateVR05bdUVt+jCalqHj9+fgNu68068dlaTQpH9gPuiuvbO9lRJ2+eYTHM5qUsry9lxF1xfRji/2AFzGg5YyoG85uHvkB7WdEXdG05VR+QFv7f4/oxZedzqI6wX64i7A3HVBGlAHVDKiXEWVAtQPqZUT5CKsdUC8jyg1UO6BeRpQjepYB9bcOMqJ8C6sbUD8jyhFdO6B+RpQjunZA/YwoR/SsAxps/jmgjChH9MwDGmREuYFqBzTIiHID1Q5okBHlBpp1QMPNw4woPweqG9AwI8oNVDugYUaUG6h2QMOMKDdQ7YCGGVF+mTrLgFb+MaCMKH/Sev4BbRxmRPkWVjmgjYwof1Q/54CuPf6UEeUNNP8baO3puKxsfFzYiFZffvX5X/x5H8r/5I1XJ+Xq2YAyogxojgE1x7/K6pPPGVHeQPO/he4c/cyIMqD6N9HN1ydl7dl4oYe19E3Evk9chCrssC5CFXZYF6EKO6yLUIUd1kWowg7rIlRhh3URqrDDughV2GFdhCrssC5CFXZYF6EKO6yLUIUd1kWowg7rIlRhh3URqrDDughV2GFdhCrssC5CFXZYF6EKO6yLUIUd1kWowg7rIlRhh3URqrDDughV2GFdhCrssC5CFXZYF6EKO6yLUIUd1kWowg7rIlRhh3URqrDDughV2GFdhCrssC5CFXZYF6EKO6yLUIUd1kWowg7rIlRhh3URqrDDughV2GFdhCrssC5CFXZYF6EKO6yLUIUd1kWowg7rIlRhh3URqrDDughV2GFdhCrssC5CFXZYF6EKO6yLUIUd1kWowg7rIlRhh3URqrDDughV2GFdhCrssC5CFXZYF6EKO6yLUIUd1kWowg7rIlRhh3URqrDDughV2GFdhCrssC5CFXZYF6EKO6yLUIUd1kWowg7rIlRhh3URqrDDughV2GFdhCrssC5CFXZYF6FK05ZTdlx52/IdqjRt2aUHFrdpyw5UWW/LQ3ZgedtyH6rcOioXm0l5T4+s67u7B+UClFk/LksZUelkPLe/lctw4OxN1JYH08/rHNZl7tFM2zWT8nb6sSX/5gkhhBBCCCGEEEIIIYQQQgghhBBCCDgHvwHDGQwojgVeUQAAAABJRU5ErkJggg==", At = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJAAAACQCAYAAADnRuK4AAAACXBIWXMAAAsTAAALEwEAmpwYAAAEB0lEQVR4nO2ZwWodZQCFf7A73RRbk9RUIeidUUQE8RkspQ+iFp9B3XXrQlBUJsWKXXSjxlizCIUW0xnr0iiCD6CbWusmJPbIjQs3EgQz859z/T44DzD/9/WfzG0pAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwv0UflVV15aLWy5daL9+rK79rvajKuvJm7fOAf4k+LKe1Xt5WV/arBfPPEV1Cojm6XC6oK/eqx8JNlIcul9fUlYPqkRBRHurKuYh4eJ35oQ/KGevXFq8zb9SV96vHwE0U/anu9bXFTZSDuvJ69QC4iXJRVzary+cmykXr5cfq4rmJclFX7leXTkS5HCnvygnps5PS9lnp5pp0eyYNLRsqnsHcwc21Pd148hdtrVzV5qMv+QV05SHp+pI0NMQymP+D6Vtpe/UnbZx+wSOga49w0wyB25k90PXlN+oG9OnJ+gfB9J/OYGv5kzoBXXsYecOCvNK+Wnpr2oA+PsFra9FeZ5uPPT9dQFvL9R+a6VjPYHv1u2kCmn+q87W1eAH3jbRx6sXxA5r/zlP7YZlGOYOtlavjBzT/kRCBi3kGN574efyAbq3Vf1CmUc7g1tre+AHx3xOLG/DO7MH4AdV+SKYxz4CACEwERASqdQbcQMQnAiICcQMRgRLPgFeYgQQFj4AMJCh4BGQgQcEjIAMJCh4BGUhQ8AjIQIKCR0AGEhQ8AjKQoOARkIEEBY+ADCQoeARkIEHBIyADCQoeARlIUPAIyECCgkdABhIUPAIykKDgEZCBBAWPgAwkKHgEZCBBwSMgAwkKHgEZSFDwCMhAgoJHQAYSFDwCMpCg4BGQgQQFj4AMJCh4BGQgQcEjIAMJCh4BGUhQ8AjIQIKCR0AGEhQ8AjKQoOARkIEEBY+ADCQoeARkIEHBIyADCQoeARlIUPAIyECCgkdABhIUPAIykKDgEZCBBAWPgAwkKHgEZCBBwSMgAwkKHgEZSFDwCMhAgoJHQAYSFDwCMpCg4BGQgQQFj4AMJCh4BGQgQcEjIAMJCh4BGUhQ8AjIQIKCN0VAv9V+SNaOdQb3xg+ob39A4MJGvDtBQM0XBg/KhjHOoPl8/ICG9iICFzTgvnll/IBuP7Wqodmv/rBMx3z77Ovb5szoAR1G1LfvInDBIu6bdyaJ5zCgO+2K+vbX6g/NdEzx3NXOc0uTBXQYUd+8rKE9QGKbHXLf/qG+vTBpPH9HNHuViNrkHUzyh/OREX3zzHleZ23gzdPcVT87VxzQndkpDc0l9c1e9YNhOvoMmn317Xvqn10ubujrpx8/fK399WPjrvrmPkLb2jfN3MGuhmZj/rqa7FMdAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACKI38CFedrXWsWOhwAAAAASUVORK5CYII=";
+function Xe(t, e, n) {
+  const l = t.slice();
+  return l[4] = e[n], l;
 }
-function mt(e) {
-  let t, n, l, i, u, r, s, o = (
+function _t(t) {
+  let e, n, l, i, u, r, s, o = (
     /*node*/
-    e[0].name + ""
-  ), c, _, h, C, H, w = (
+    t[0].name + ""
+  ), c, _, d, v, K, U = (
     /*node*/
-    e[0].children.filter(Xe).length + ""
-  ), Q, v, j, W, X = (
+    t[0].children.filter(je).length + ""
+  ), S, b, w, R, B = (
     /*node*/
-    e[0].children.filter(Ye).length + ""
-  ), N, $, B, O, Y, D, V, Z, G = (
+    t[0].children.filter(Me).length + ""
+  ), z, V, H, P, M, O, X, te, G = (
     /*node*/
-    e[0].children
-  ), A = [];
+    t[0].children
+  ), C = [];
   for (let f = 0; f < G.length; f += 1)
-    A[f] = Pe(Ke(e, G, f));
-  const k = (f) => P(A[f], 1, 1, () => {
-    A[f] = null;
+    C[f] = Ye(Xe(t, G, f));
+  const q = (f) => j(C[f], 1, 1, () => {
+    C[f] = null;
   });
   return {
     c() {
-      t = m("div"), n = m("div"), l = m("img"), u = F(), r = m("div"), s = m("p"), c = K(o), _ = F(), h = m("div"), C = m("p"), H = K("Directories: "), Q = K(w), v = F(), j = m("p"), W = K("Files: "), N = K(X), B = F(), O = m("div");
-      for (let f = 0; f < A.length; f += 1)
-        A[f].c();
-      g(l, "width", "24"), g(l, "height", "24"), b(l, "margin-right", "8px"), Se(l.src, i = pt) || g(l, "src", i), g(l, "alt", "Directory icon"), b(s, "margin", "0"), b(s, "font-size", "16px"), b(s, "font-weight", "500"), b(C, "margin", "0"), b(j, "margin", "0"), b(h, "font-size", "12px"), b(h, "display", "flex"), b(h, "flex-direction", "row"), b(h, "column-gap", "10px"), b(h, "color", "#6b7280"), b(r, "display", "flex"), b(r, "flex-direction", "column"), b(n, "display", "flex"), b(n, "flex-direction", "row"), b(n, "align-items", "center"), g(t, "style", $ = `margin-left: ${/*level*/
-      e[1] * 64}px; padding: 16px; background-color: white; cursor: pointer;`), g(O, "style", Y = `transition: max-height 0.75s ease-in-out; overflow: hidden; max-height: ${/*showChildren*/
-      e[2] ? "1000px" : "0px"}; `);
+      e = A("div"), n = A("div"), l = A("img"), u = F(), r = A("div"), s = A("p"), c = Y(o), _ = F(), d = A("div"), v = A("p"), K = Y("Directories: "), S = Y(U), b = F(), w = A("p"), R = Y("Files: "), z = Y(B), H = F(), P = A("div");
+      for (let f = 0; f < C.length; f += 1)
+        C[f].c();
+      h(l, "width", "24"), h(l, "height", "24"), y(l, "margin-right", "8px"), Ne(l.src, i = At) || h(l, "src", i), h(l, "alt", "Directory icon"), y(s, "margin", "0"), y(s, "font-size", "16px"), y(s, "font-weight", "500"), y(v, "margin", "0"), y(w, "margin", "0"), y(d, "font-size", "12px"), y(d, "display", "flex"), y(d, "flex-direction", "row"), y(d, "column-gap", "10px"), y(d, "color", "#6b7280"), y(r, "display", "flex"), y(r, "flex-direction", "column"), y(n, "display", "flex"), y(n, "flex-direction", "row"), y(n, "align-items", "center"), h(e, "style", V = `margin-left: ${/*level*/
+      t[1] * 64}px; padding: 16px; background-color: white; cursor: pointer;`), h(P, "style", M = `transition: max-height 0.75s ease-in-out; overflow: hidden; max-height: ${/*showChildren*/
+      t[2] ? "1000px" : "0px"}; `);
     },
-    m(f, a) {
-      I(f, t, a), d(t, n), d(n, l), d(n, u), d(n, r), d(r, s), d(s, c), d(r, _), d(r, h), d(h, C), d(C, H), d(C, Q), d(h, v), d(h, j), d(j, W), d(j, N), I(f, B, a), I(f, O, a);
-      for (let p = 0; p < A.length; p += 1)
-        A[p] && A[p].m(O, null);
-      D = !0, V || (Z = M(
-        t,
+    m(f, p) {
+      I(f, e, p), a(e, n), a(n, l), a(n, u), a(n, r), a(r, s), a(s, c), a(r, _), a(r, d), a(d, v), a(v, K), a(v, S), a(d, b), a(d, w), a(w, R), a(w, z), I(f, H, p), I(f, P, p);
+      for (let g = 0; g < C.length; g += 1)
+        C[g] && C[g].m(P, null);
+      O = !0, X || (te = N(
+        e,
         "click",
         /*toggleShowChildren*/
-        e[3]
-      ), V = !0);
+        t[3]
+      ), X = !0);
     },
-    p(f, a) {
-      if ((!D || a & /*node*/
+    p(f, p) {
+      if ((!O || p & /*node*/
       1) && o !== (o = /*node*/
-      f[0].name + "") && ee(c, o), (!D || a & /*node*/
-      1) && w !== (w = /*node*/
-      f[0].children.filter(Xe).length + "") && ee(Q, w), (!D || a & /*node*/
-      1) && X !== (X = /*node*/
-      f[0].children.filter(Ye).length + "") && ee(N, X), (!D || a & /*level*/
-      2 && $ !== ($ = `margin-left: ${/*level*/
-      f[1] * 64}px; padding: 16px; background-color: white; cursor: pointer;`)) && g(t, "style", $), a & /*node, level*/
+      f[0].name + "") && ne(c, o), (!O || p & /*node*/
+      1) && U !== (U = /*node*/
+      f[0].children.filter(je).length + "") && ne(S, U), (!O || p & /*node*/
+      1) && B !== (B = /*node*/
+      f[0].children.filter(Me).length + "") && ne(z, B), (!O || p & /*level*/
+      2 && V !== (V = `margin-left: ${/*level*/
+      f[1] * 64}px; padding: 16px; background-color: white; cursor: pointer;`)) && h(e, "style", V), p & /*node, level*/
       3) {
         G = /*node*/
         f[0].children;
-        let p;
-        for (p = 0; p < G.length; p += 1) {
-          const y = Ke(f, G, p);
-          A[p] ? (A[p].p(y, a), R(A[p], 1)) : (A[p] = Pe(y), A[p].c(), R(A[p], 1), A[p].m(O, null));
+        let g;
+        for (g = 0; g < G.length; g += 1) {
+          const m = Xe(f, G, g);
+          C[g] ? (C[g].p(m, p), $(C[g], 1)) : (C[g] = Ye(m), C[g].c(), $(C[g], 1), C[g].m(P, null));
         }
-        for (ue(), p = G.length; p < A.length; p += 1)
-          k(p);
-        ae();
+        for (ae(), g = G.length; g < C.length; g += 1)
+          q(g);
+        de();
       }
-      (!D || a & /*showChildren*/
-      4 && Y !== (Y = `transition: max-height 0.75s ease-in-out; overflow: hidden; max-height: ${/*showChildren*/
-      f[2] ? "1000px" : "0px"}; `)) && g(O, "style", Y);
+      (!O || p & /*showChildren*/
+      4 && M !== (M = `transition: max-height 0.75s ease-in-out; overflow: hidden; max-height: ${/*showChildren*/
+      f[2] ? "1000px" : "0px"}; `)) && h(P, "style", M);
     },
     i(f) {
-      if (!D) {
-        for (let a = 0; a < G.length; a += 1)
-          R(A[a]);
-        D = !0;
+      if (!O) {
+        for (let p = 0; p < G.length; p += 1)
+          $(C[p]);
+        O = !0;
       }
     },
     o(f) {
-      A = A.filter(Boolean);
-      for (let a = 0; a < A.length; a += 1)
-        P(A[a]);
-      D = !1;
+      C = C.filter(Boolean);
+      for (let p = 0; p < C.length; p += 1)
+        j(C[p]);
+      O = !1;
     },
     d(f) {
-      f && U(t), f && U(B), f && U(O), me(A, f), V = !1, Z();
+      f && Q(e), f && Q(H), f && Q(P), _e(C, f), X = !1, te();
     }
   };
 }
-function At(e) {
-  let t, n, l, i, u, r, s, o = (
+function bt(t) {
+  let e, n, l, i, u, r, s, o = (
     /*node*/
-    e[0].name + ""
+    t[0].name + ""
   ), c, _;
   return {
     c() {
-      t = m("div"), n = m("div"), l = m("img"), u = F(), r = m("div"), s = m("p"), c = K(o), g(l, "width", "24"), g(l, "height", "24"), b(l, "margin-right", "8px"), Se(l.src, i = gt) || g(l, "src", i), g(l, "alt", "File icon"), b(s, "margin", "0"), b(s, "font-size", "16px"), b(s, "font-weight", "500"), b(n, "display", "flex"), b(n, "flex-direction", "row"), b(n, "align-items", "center"), g(t, "style", _ = `margin-left: ${/*level*/
-      e[1] * 64}px; padding: 16px; background-color: white; cursor: default;`);
+      e = A("div"), n = A("div"), l = A("img"), u = F(), r = A("div"), s = A("p"), c = Y(o), h(l, "width", "24"), h(l, "height", "24"), y(l, "margin-right", "8px"), Ne(l.src, i = mt) || h(l, "src", i), h(l, "alt", "File icon"), y(s, "margin", "0"), y(s, "font-size", "16px"), y(s, "font-weight", "500"), y(n, "display", "flex"), y(n, "flex-direction", "row"), y(n, "align-items", "center"), h(e, "style", _ = `margin-left: ${/*level*/
+      t[1] * 64}px; padding: 16px; background-color: white; cursor: default;`);
     },
-    m(h, C) {
-      I(h, t, C), d(t, n), d(n, l), d(n, u), d(n, r), d(r, s), d(s, c);
+    m(d, v) {
+      I(d, e, v), a(e, n), a(n, l), a(n, u), a(n, r), a(r, s), a(s, c);
     },
-    p(h, C) {
-      C & /*node*/
+    p(d, v) {
+      v & /*node*/
       1 && o !== (o = /*node*/
-      h[0].name + "") && ee(c, o), C & /*level*/
+      d[0].name + "") && ne(c, o), v & /*level*/
       2 && _ !== (_ = `margin-left: ${/*level*/
-      h[1] * 64}px; padding: 16px; background-color: white; cursor: default;`) && g(t, "style", _);
+      d[1] * 64}px; padding: 16px; background-color: white; cursor: default;`) && h(e, "style", _);
     },
-    i: x,
-    o: x,
-    d(h) {
-      h && U(t);
+    i: E,
+    o: E,
+    d(d) {
+      d && Q(e);
     }
   };
 }
-function Pe(e) {
-  let t, n, l, i;
-  return n = new we({
+function Ye(t) {
+  let e, n, l, i;
+  return n = new xe({
     props: {
       node: (
         /*childNode*/
-        e[4]
+        t[4]
       ),
       level: (
         /*level*/
-        e[1] + 1
+        t[1] + 1
       )
     }
   }), {
     c() {
-      t = m("div"), We(n.$$.fragment), l = F(), b(t, "border-top", "1px solid #e2e8f0");
+      e = A("div"), Ze(n.$$.fragment), l = F(), y(e, "border-top", "1px solid #e2e8f0");
     },
     m(u, r) {
-      I(u, t, r), Ce(n, t, null), d(t, l), i = !0;
+      I(u, e, r), ve(n, e, null), a(e, l), i = !0;
     },
     p(u, r) {
       const s = {};
@@ -744,79 +772,79 @@ function Pe(e) {
       u[1] + 1), n.$set(s);
     },
     i(u) {
-      i || (R(n.$$.fragment, u), i = !0);
+      i || ($(n.$$.fragment, u), i = !0);
     },
     o(u) {
-      P(n.$$.fragment, u), i = !1;
+      j(n.$$.fragment, u), i = !1;
     },
     d(u) {
-      u && U(t), ye(n);
+      u && Q(e), we(n);
     }
   };
 }
-function _t(e) {
-  let t, n, l, i;
-  const u = [At, mt], r = [];
+function Ct(t) {
+  let e, n, l, i;
+  const u = [bt, _t], r = [];
   function s(o, c) {
     return (
       /*node*/
       o[0].isFile ? 0 : 1
     );
   }
-  return t = s(e), n = r[t] = u[t](e), {
+  return e = s(t), n = r[e] = u[e](t), {
     c() {
-      n.c(), l = Ae(), this.c = x;
+      n.c(), l = be(), this.c = E;
     },
     m(o, c) {
-      r[t].m(o, c), I(o, l, c), i = !0;
+      r[e].m(o, c), I(o, l, c), i = !0;
     },
     p(o, [c]) {
-      let _ = t;
-      t = s(o), t === _ ? r[t].p(o, c) : (ue(), P(r[_], 1, 1, () => {
+      let _ = e;
+      e = s(o), e === _ ? r[e].p(o, c) : (ae(), j(r[_], 1, 1, () => {
         r[_] = null;
-      }), ae(), n = r[t], n ? n.p(o, c) : (n = r[t] = u[t](o), n.c()), R(n, 1), n.m(l.parentNode, l));
+      }), de(), n = r[e], n ? n.p(o, c) : (n = r[e] = u[e](o), n.c()), $(n, 1), n.m(l.parentNode, l));
     },
     i(o) {
-      i || (R(n), i = !0);
+      i || ($(n), i = !0);
     },
     o(o) {
-      P(n), i = !1;
+      j(n), i = !1;
     },
     d(o) {
-      r[t].d(o), o && U(l);
+      r[e].d(o), o && Q(l);
     }
   };
 }
-const Xe = (e) => !e.isFile, Ye = (e) => e.isFile;
-function bt(e, t, n) {
+const je = (t) => !t.isFile, Me = (t) => t.isFile;
+function yt(t, e, n) {
   let { node: l = {
     id: "",
     name: "",
     isFile: !1,
     children: []
-  } } = t, { level: i = 0 } = t, u = !1;
+  } } = e, { level: i = 0 } = e, u = !1;
   function r() {
     n(2, u = !u);
   }
-  return e.$$set = (s) => {
+  return t.$$set = (s) => {
     "node" in s && n(0, l = s.node), "level" in s && n(1, i = s.level);
   }, [l, i, u, r];
 }
-class we extends fe {
-  constructor(t) {
-    super(), ve(
+class xe extends he {
+  constructor(e) {
+    super(), ke(
       this,
       {
         target: this.shadowRoot,
-        props: _e(this.attributes),
+        props: Ce(this.attributes),
         customElement: !0
       },
-      bt,
-      _t,
-      se,
+      yt,
+      Ct,
+      fe,
       { node: 0, level: 1 },
       null
-    ), t && (t.target && I(t.target, this, t.anchor), t.props && (this.$set(t.props), ne()));
+    ), e && (e.target && I(e.target, this, e.anchor), e.props && (this.$set(e.props), ie()));
   }
   static get observedAttributes() {
     return ["node", "level"];
@@ -824,41 +852,41 @@ class we extends fe {
   get node() {
     return this.$$.ctx[0];
   }
-  set node(t) {
-    this.$$set({ node: t }), ne();
+  set node(e) {
+    this.$$set({ node: e }), ie();
   }
   get level() {
     return this.$$.ctx[1];
   }
-  set level(t) {
-    this.$$set({ level: t }), ne();
+  set level(e) {
+    this.$$set({ level: e }), ie();
   }
 }
-customElements.define("file-hierarchy-item", we);
-function je(e, t, n) {
-  const l = e.slice();
-  return l[1] = t[n], l;
+customElements.define("file-hierarchy-item", xe);
+function Se(t, e, n) {
+  const l = t.slice();
+  return l[1] = e[n], l;
 }
-function Ct(e) {
-  let t, n, l = (
+function vt(t) {
+  let e, n, l = (
     /*$fileStore*/
-    e[0]
+    t[0]
   ), i = [];
   for (let r = 0; r < l.length; r += 1)
-    i[r] = Me(je(e, l, r));
-  const u = (r) => P(i[r], 1, 1, () => {
+    i[r] = qe(Se(t, l, r));
+  const u = (r) => j(i[r], 1, 1, () => {
     i[r] = null;
   });
   return {
     c() {
       for (let r = 0; r < i.length; r += 1)
         i[r].c();
-      t = Ae();
+      e = be();
     },
     m(r, s) {
       for (let o = 0; o < i.length; o += 1)
         i[o] && i[o].m(r, s);
-      I(r, t, s), n = !0;
+      I(r, e, s), n = !0;
     },
     p(r, s) {
       if (s & /*$fileStore*/
@@ -867,132 +895,132 @@ function Ct(e) {
         r[0];
         let o;
         for (o = 0; o < l.length; o += 1) {
-          const c = je(r, l, o);
-          i[o] ? (i[o].p(c, s), R(i[o], 1)) : (i[o] = Me(c), i[o].c(), R(i[o], 1), i[o].m(t.parentNode, t));
+          const c = Se(r, l, o);
+          i[o] ? (i[o].p(c, s), $(i[o], 1)) : (i[o] = qe(c), i[o].c(), $(i[o], 1), i[o].m(e.parentNode, e));
         }
-        for (ue(), o = l.length; o < i.length; o += 1)
+        for (ae(), o = l.length; o < i.length; o += 1)
           u(o);
-        ae();
+        de();
       }
     },
     i(r) {
       if (!n) {
         for (let s = 0; s < l.length; s += 1)
-          R(i[s]);
+          $(i[s]);
         n = !0;
       }
     },
     o(r) {
       i = i.filter(Boolean);
       for (let s = 0; s < i.length; s += 1)
-        P(i[s]);
+        j(i[s]);
       n = !1;
     },
     d(r) {
-      me(i, r), r && U(t);
+      _e(i, r), r && Q(e);
     }
   };
 }
-function yt(e) {
-  let t;
+function wt(t) {
+  let e;
   return {
     c() {
-      t = m("div"), t.innerHTML = "<p>Empty. Please add a file or directory.</p>", g(t, "class", "empty");
+      e = A("div"), e.innerHTML = "<p>Empty. Please add a file or directory.</p>", h(e, "class", "empty");
     },
     m(n, l) {
-      I(n, t, l);
+      I(n, e, l);
     },
-    p: x,
-    i: x,
-    o: x,
+    p: E,
+    i: E,
+    o: E,
     d(n) {
-      n && U(t);
+      n && Q(e);
     }
   };
 }
-function Me(e) {
-  let t, n;
-  return t = new we({ props: { node: (
+function qe(t) {
+  let e, n;
+  return e = new xe({ props: { node: (
     /*node*/
-    e[1]
+    t[1]
   ) } }), {
     c() {
-      We(t.$$.fragment);
+      Ze(e.$$.fragment);
     },
     m(l, i) {
-      Ce(t, l, i), n = !0;
+      ve(e, l, i), n = !0;
     },
     p(l, i) {
       const u = {};
       i & /*$fileStore*/
       1 && (u.node = /*node*/
-      l[1]), t.$set(u);
+      l[1]), e.$set(u);
     },
     i(l) {
-      n || (R(t.$$.fragment, l), n = !0);
+      n || ($(e.$$.fragment, l), n = !0);
     },
     o(l) {
-      P(t.$$.fragment, l), n = !1;
+      j(e.$$.fragment, l), n = !1;
     },
     d(l) {
-      ye(t, l);
+      we(e, l);
     }
   };
 }
-function vt(e) {
-  let t, n, l, i;
-  const u = [yt, Ct], r = [];
+function kt(t) {
+  let e, n, l, i;
+  const u = [wt, vt], r = [];
   function s(o, c) {
     return (
       /*$fileStore*/
       o[0].length === 0 ? 0 : 1
     );
   }
-  return t = s(e), n = r[t] = u[t](e), {
+  return e = s(t), n = r[e] = u[e](t), {
     c() {
-      n.c(), l = Ae(), this.c = x;
+      n.c(), l = be(), this.c = E;
     },
     m(o, c) {
-      r[t].m(o, c), I(o, l, c), i = !0;
+      r[e].m(o, c), I(o, l, c), i = !0;
     },
     p(o, [c]) {
-      let _ = t;
-      t = s(o), t === _ ? r[t].p(o, c) : (ue(), P(r[_], 1, 1, () => {
+      let _ = e;
+      e = s(o), e === _ ? r[e].p(o, c) : (ae(), j(r[_], 1, 1, () => {
         r[_] = null;
-      }), ae(), n = r[t], n ? n.p(o, c) : (n = r[t] = u[t](o), n.c()), R(n, 1), n.m(l.parentNode, l));
+      }), de(), n = r[e], n ? n.p(o, c) : (n = r[e] = u[e](o), n.c()), $(n, 1), n.m(l.parentNode, l));
     },
     i(o) {
-      i || (R(n), i = !0);
+      i || ($(n), i = !0);
     },
     o(o) {
-      P(n), i = !1;
+      j(n), i = !1;
     },
     d(o) {
-      r[t].d(o), o && U(l);
+      r[e].d(o), o && Q(l);
     }
   };
 }
-function wt(e, t, n) {
+function xt(t, e, n) {
   let l;
-  return qe(e, oe, (i) => n(0, l = i)), [l];
+  return We(t, se, (i) => n(0, l = i)), [l];
 }
-class kt extends fe {
-  constructor(t) {
+class Et extends he {
+  constructor(e) {
     super();
     const n = document.createElement("style");
-    n.textContent = ".empty{width:100%;min-height:400px;display:flex;flex-direction:row;align-items:center;justify-content:center}", this.shadowRoot.appendChild(n), ve(
+    n.textContent = ".empty{width:100%;min-height:400px;display:flex;flex-direction:row;align-items:center;justify-content:center}", this.shadowRoot.appendChild(n), ke(
       this,
       {
         target: this.shadowRoot,
-        props: _e(this.attributes),
+        props: Ce(this.attributes),
         customElement: !0
       },
-      wt,
-      vt,
-      se,
+      xt,
+      kt,
+      fe,
       {},
       null
-    ), t && t.target && I(t.target, this, t.anchor);
+    ), e && e.target && I(e.target, this, e.anchor);
   }
 }
-customElements.define("file-hierarchy", kt);
+customElements.define("file-hierarchy", Et);
